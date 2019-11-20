@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Add module to kernel
+insmod char_device.ko || exit 1
+ 
+# As we can maybe not know the major number (dynamically allocation)
+# we get it from system in /proc/devices
+MAJOR_NUMBER=$(cat /proc/devices | grep chardevice | cut -d " " -f 1)
+MINOR_NUMBER=0
+ 
+# Create device node and add permission to read and write from it
+mknod /dev/chardevice0 c $MAJOR_NUMBER $MINOR_NUMBER
+chmod a+rw /dev/chardevice0

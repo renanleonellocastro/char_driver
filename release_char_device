@@ -1,0 +1,7 @@
+#!/bin/sh
+ 
+# Remove module from kernel
+rmmod char_device || exit 1
+
+# Remove device node
+rm -f /dev/chardevice0
