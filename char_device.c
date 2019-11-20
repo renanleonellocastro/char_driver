@@ -1,5 +1,5 @@
 /*
- * char_dev.c -- Very simple character device
+ * char_device.c -- Very simple character device
  * Description: A simple device that, on read, return FIRST!, SECOND! or THIRD!
  *  according to user's write (1, 2 or 3). Example: If user write "1" to the
  *  device, and then user read the device, the device will answer "FIRST!".
