@@ -1,4 +1,4 @@
-# Makefile:  makefile of my first char device driver
+# Makefile:  makefile of a simple char driver
 
 # if KERNELRELEASE is not defined, we've been called directly from the command line.
 # Invoke the kernel build system.
